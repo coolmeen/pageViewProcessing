@@ -50,6 +50,7 @@ if i had more time i would :
  
  
 **for more scalability:**
+1. run it with spark/flink/any other runner in distributed mode should work without any major changes.
 1. for lower latency and if we have continuous incoming data if needed we should consider switching the pipeline for streaming instead of batch, but than we would have to deal with watermarks and late arrivals
 2. we can read the csv and store it kafka and distribute the data over the topic's partition to multiple beam runners(spark).
 3. i am currently writing to cassandra directly, a better solution is maybe again use kafka as mid layer for data reliability.
